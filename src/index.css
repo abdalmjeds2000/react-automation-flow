@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/fonts/Bahij_TheSansArabic-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/Bahij_TheSansArabic-SemiLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/Bahij_TheSansArabic-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Bahij_TheSansArabic-Plain.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Bahij_TheSansArabic-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/Bahij Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Bahij_TheSansArabic-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/Bahij_TheSansArabic-Black 10.ttf') format('truetype');
+}
+
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    @apply dark:border-[#5a5a5a];
+  }
+  :root {
+    --salic-primary: #08305C;
+    --salic-primary2: #0B4D89;
+    --salic-secondary: #339BD6;
+    --salic-success: #2A9F61;
+    --salic-success-light: #7ED4AD;
+    --salic-danger: #E74848;
+    --salic-warning: #E6AB15;
+    --salic-info: #79BDE3;
+    --salic-info-light: #EAF1FB;
+
+    --salic-light-100: #F6F8FC;
+
+    --salic-dark-100: #2A2A2A;
+    --salic-dark-200: #181818;
+    --salic-dark-300: #0F0F0F;
+  }
+}
+
+
+/* Default light mode styles */
+body {
+  font-family: 'Inter', 'Bahij', 'Arial', 'Roboto', 'sans-serif';
+  @apply bg-light text-primary dark:text-white; 
+}
+
+/* Dark mode styles */
+body.dark {
+  @apply bg-dark-200 text-white; /* Main background */
+}
+
+
+html:has(.dark), body.dark, body.dark * {
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-width: thin;
+}
+body * {
+  scrollbar-color: #e1e5ea transparent;
+}
+
+html:has(.dark), .dark * {
+  scrollbar-color: #3b3b3b transparent;
+}
+
+
+/* Default Lucide icon styles */
+.lucide {
+  stroke-width: 2.5px;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
